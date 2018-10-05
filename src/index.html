@@ -1,14 +1,54 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <title>Chimbser</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta charset="UTF-8">
+	<title>Gaurav Raje</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="The most powerful CV / RESUME template">
+	<meta name="keywords" content="Enter, your, keywords">
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/plugins.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
+<base href="./">
 <body>
-  <app-root></app-root>
+    <div class="preloader">
+        <div class="preloader-circle"></div>
+    </div>
+	<app id="app"></app>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 huge-side left-side">
+                <profile></profile>
+            </div>
+            <div class="col-sm-8 huge-side right-side">
+                <section class="content about">
+                    <about> </about>
+                    <education></education>
+                    <workexperience></workexperience>
+                    <portfolio></portfolio>
+                </section>
+
+                <div class="content-blocks contact">
+                   <contact></contact>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='js/jquery.min.js'></script>
+	<script src='js/react.min.js'></script>
+	<script src='js/react-dom.js'></script>
+	<script src='js/parallax.min.js'></script>
+	<script src='js/react-motion.js'></script>
+    <script src='js/isotope.pkgd.js'></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRxA5XwJRzjb8qU1CNVSs9MDhzEoieKE"></script>-->
+    <script src="js/header.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

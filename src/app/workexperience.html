@@ -1,0 +1,18 @@
+<div class="block-content">
+                        <h3 class="title">Work Experience</h3>
+                        <div class="timeline experience">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="exp-holder">
+                                        <div class="exp" *ngFor="let work of works">
+                                            <div class="hgroup">
+                                                <h4><span>{{work.position}}</span> / {{work.name}}</h4>
+                                                <h5 class="badge">{{work.year}}</h5>
+                                            </div>
+                                            <p>{{work.description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
