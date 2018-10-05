@@ -1,0 +1,18 @@
+<div class="block-content">
+                        <h3 class="title">Education</h3>
+                        <div class="timeline education">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="exp-holder">
+
+                                      <div class = "exp" *ngFor="let school of schools">
+                                        <div class="hgroup">
+                                          <h4>{{school.program}} -  <span>{{school.name}}<h5 class="badge">{{school.year}}</h5></span></h4>
+                                        </div>
+                                        <p>{{school.description}}</p>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
