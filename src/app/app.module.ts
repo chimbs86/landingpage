@@ -10,20 +10,23 @@ import { Contact } from './contact';
 import { Profile } from './profile';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {NGXChartsComponent} from "./ngx-charts.component";
+
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, WorkExperience, Education, Portfolio, About, Contact, Profile
+    AppComponent, WorkExperience, Education, Portfolio, About, Contact, Profile,NGXChartsComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, NgxChartsModule
   ],
   providers: [],
-  bootstrap: [Education, WorkExperience, Portfolio, About, Contact, Profile]
+  bootstrap: [Education, WorkExperience, Portfolio, About, Contact, Profile, NGXChartsComponent]
 })
 export class AppModule { }
