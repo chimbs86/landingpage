@@ -1,0 +1,8 @@
+{
+  "/contact": {
+    "target": "https://ftsre3mvnl.execute-api.us-east-1.amazonaws.com/email?",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

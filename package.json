@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,7 @@
     "@types/d3-shape": "^1.2.4",
     "core-js": "^2.5.4",
     "d3": "^5.7.0",
+    "ember-cli-cors": "0.0.2",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

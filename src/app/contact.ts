@@ -1,11 +1,7 @@
-import {Component} from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {catchError} from 'rxjs/operators';
+import {Component, Injectable} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 import {throwError} from 'rxjs';
-
-
 
 
 @Component({
@@ -15,9 +11,15 @@ import {throwError} from 'rxjs';
 })
 @Injectable()
 export class Contact {
-  constructor(private http: HttpClient) { }
-  headers = new Headers();
+  constructor(private http: HttpClient) {
+  }
 
+  headers = new Headers();
+  url = 'https://ftsre3mvnl.execute-api.us-east-1.amazonaws.com/email?';
+  enabled = true;
+
+  contactRequest = new ContactRequest();
+  response = "";
 
   address = 'Woodside - Queens NY';
   phone = '720-924-66two7';
@@ -27,7 +29,12 @@ export class Contact {
     email: new FormControl(''),
     message: new FormControl('')
   });
+
   onSubmit() {
+    console.log(this.url);
+    this.enabled = false;
+    this.http.post(this.url, this.contactRequest).subscribe((data: string) => this.response = data );
+
   }
 
   private handler() {
@@ -35,4 +42,10 @@ export class Contact {
     return throwError(
       'Something bad happened; please try again later.');
   }
+}
+
+class ContactRequest {
+  name = "";
+  contactEmail = "";
+  message = "";
 }
