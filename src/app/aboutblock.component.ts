@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './LandingPage.html',
+  selector: 'about-block',
+  templateUrl: './aboutblock.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AboutblockComponent {
 
 }

@@ -29,11 +29,14 @@ export class Contact {
     email: new FormControl(''),
     message: new FormControl('')
   });
+  buttonLabel= 'Send Message';
 
   onSubmit() {
     console.log(this.url);
     this.enabled = false;
+    this.buttonLabel = 'Sending Message';
     this.http.post(this.url, this.contactRequest).subscribe((data: string) => this.response = data );
+    this.buttonLabel = 'Message Sent';
 
   }
 

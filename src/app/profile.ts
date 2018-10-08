@@ -22,5 +22,6 @@ export class Profile {
   srcUrl = 'images/avatar/avatar-195x195.png';
   srcSetUrl = 'images/avatar/avatar-390x390-2x.png 2x';
   occupation = 'Software Developer';
-  resumeUrl = '_blank';
+  resumeUrl = 'assets/resumeGauravRajeOffline.pdf';
+  resumeTarget= '_blank';
 }

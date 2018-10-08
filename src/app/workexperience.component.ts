@@ -12,7 +12,8 @@ new Work('Enterprise Software Developer',
   'Integral Ad Science',
   'Oct 2014 - present',
   'I have become the "Go To" person when it comes to my project. I have architected a complete rewrite of the application, ' +
-  'a 60% performance upgrade, introduced thorough end to end testing framework as well as other frameworks to the codebase.'),
+  'a 60% performance upgrade, introduced thorough end to end testing framework as well as other frameworks to the codebase.' +
+  "Don't Believe me? I contributed to our Tech Blog outlining the steps I took to achieve this miracle - https://insider.integralads.com/beat-java-bottlenecks/"),
 
     new Work('Platform Developer',
       'Pulsepoint Inc',

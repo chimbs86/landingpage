@@ -12,6 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {NGXChartsComponent} from "./ngx-charts.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {AboutblockComponent} from "./aboutblock.component";
+
+
 
 
 
@@ -19,14 +23,14 @@ import {NGXChartsComponent} from "./ngx-charts.component";
 
 @NgModule({
   declarations: [
-    AppComponent, WorkExperience, Education, Portfolio, About, Contact, Profile,NGXChartsComponent
+    AppComponent, WorkExperience, Education, Portfolio, About, Contact, Profile,NGXChartsComponent, AboutblockComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule, NgxChartsModule
+    HttpClientModule, NgxChartsModule, BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [Education, WorkExperience, Portfolio, About, Contact, Profile, NGXChartsComponent]
+  bootstrap: [AppComponent,Education, WorkExperience, Portfolio, About, Contact, Profile, NGXChartsComponent,AboutblockComponent]
 })
 export class AppModule { }

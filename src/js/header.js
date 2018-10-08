@@ -63,7 +63,7 @@ var _React = React,
     files = "./images/intro",
     content = {
         title: "Gaurav Raje",
-        subtitle: "Software Developer",
+        subtitle: "Software Developer-MBA Candidate",
         iphone: {
             title: "Mobile First",
             paragraph: "Mobile first design of software ahead of the curve. ",

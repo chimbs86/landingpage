@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {School} from './School';
+import {animate, style, transition, trigger,} from '@angular/animations';
 
 @Component({
   selector: 'education',
@@ -7,6 +8,7 @@ import {School} from './School';
   styleUrls: ['./app.component.css']
 })
 export class Education {
+  showDiv = true;
   schools = [
     new School('Masters in Business Administration (MBA) ',
       'New York University - Stern School of Business',
@@ -26,5 +28,10 @@ export class Education {
       '2004-2008',
       'Data Warehousing, Embedded Systems, Networking amongst other specialities.')
   ];
-
+  toggleDiv(){
+    this.showDiv = !this.showDiv;
+  }
+onInview(){
+    alert("alert");
+}
 }
