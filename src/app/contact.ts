@@ -1,7 +1,8 @@
-import {Component, Injectable} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {throwError} from 'rxjs';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,7 @@ import {throwError} from 'rxjs';
 })
 @Injectable()
 export class Contact {
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   headers = new Headers();
@@ -35,8 +36,9 @@ export class Contact {
     console.log(this.url);
     this.enabled = false;
     this.buttonLabel = 'Sending Message';
-    this.http.post(this.url, this.contactRequest).subscribe((data: string) => this.response = data );
+    // this.http.post(this.url, this.contactRequest).subscribe((data: string) => this.response = data );
     this.buttonLabel = 'Message Sent';
+    this.router.navigate(['sent']);
 
   }
 
@@ -44,6 +46,10 @@ export class Contact {
     alert('error');
     return throwError(
       'Something bad happened; please try again later.');
+  }
+
+  ngOnInit(): void {
+    // this.router.navigate(['animals']);
   }
 }
 
